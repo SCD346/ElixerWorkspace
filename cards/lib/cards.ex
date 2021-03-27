@@ -35,4 +35,10 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
+## Define a method: 4
+  # using split method: takes in a list (deck) and an integer (represents the lenght of the list you want returned)
+  # then 'splits' it into two enumerables (lists), 1: a list the length if the integer provided, 2: a list with the leftovers
+  def deal(deck, hand_size) do
+    Enum.split(deck, hand_size)
+  end
 end
