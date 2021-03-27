@@ -35,10 +35,17 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
-## Define a method: 4
+# Define a method: 4
   # using split method: takes in a list (deck) and an integer (represents the lenght of the list you want returned)
   # then 'splits' it into two enumerables (lists), 1: a list the length if the integer provided, 2: a list with the leftovers
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
+  end
+
+  def save(deck, filename) do
+              # Erlang.term_to_binary: takes the deck argument, turns it into an object so it can be saved
+    binary = :erlang.term_to_binary(deck)
+              # object saved from above, passed to file.write to be saved
+    File.write(filename, binary)
   end
 end
