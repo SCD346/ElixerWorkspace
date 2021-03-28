@@ -57,4 +57,17 @@ defmodule Cards do
       {:error, _reason} -> "That file does NOT exist."
     end
   end
+
+    # FUNCTION: combines create, shuffle, deal into on function
+  def create_hand(hand_size) do
+    deck = Cards.create_deck
+    deck = Cards.shuffle(deck)
+    hand = Cards.deal(deck, hand_size)
+  end
 end
+
+
+
+
+
+
