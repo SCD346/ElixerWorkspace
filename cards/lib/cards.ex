@@ -42,10 +42,21 @@ defmodule Cards do
     Enum.split(deck, hand_size)
   end
 
+  # FUNCTION: Save a deck
   def save(deck, filename) do
               # Erlang.term_to_binary: takes the deck argument, turns it into an object so it can be saved
     binary = :erlang.term_to_binary(deck)
               # object saved from above, passed to file.write to be saved
     File.write(filename, binary)
+  end
+
+  #FUNCTION: Loads in a file, handles errors
+  def load(filename) do
+    {status, binary} = File.read(filename)
+
+    case status do
+      :ok -> :erlang.binary_to_term binary
+      :error -> "That file does NOT exist."
+    end
   end
 end
