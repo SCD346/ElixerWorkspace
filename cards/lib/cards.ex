@@ -60,9 +60,14 @@ defmodule Cards do
 
     # FUNCTION: combines create, shuffle, deal into on function
   def create_hand(hand_size) do
-    deck = Cards.create_deck
-    deck = Cards.shuffle(deck)
-    hand = Cards.deal(deck, hand_size)
+    # # version without pipe operator
+    # deck = Cards.create_deck
+    # deck = Cards.shuffle(deck)
+    # hand = Cards.deal(deck, hand_size)
+    # # Refactored version, with pipe operator
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
   end
 end
 

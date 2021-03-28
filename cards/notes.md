@@ -37,3 +37,7 @@ BEAM stands for "Bodgan/Bjon's Earland Abstract Machine"
 
 - Atoms with Strings are used to put together something for the user - Like an error message
 - Use an underscore infront of an Atom name to avoid the unused variable error message , needed for pattern matching
+
+Combine functions with pipe operator |
+
+-
