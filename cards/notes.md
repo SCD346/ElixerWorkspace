@@ -1,4 +1,4 @@
-Elixir Documentation: https://elixir-lang.org/docs.html
+Elixir Documentation: https://elixir-lang.org/docs.html - Elixir sits on top of Erlang
 
 #Section 1: An Elixir Warmup
 
