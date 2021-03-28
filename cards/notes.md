@@ -39,5 +39,7 @@ BEAM stands for "Bodgan/Bjon's Earland Abstract Machine"
 - Use an underscore infront of an Atom name to avoid the unused variable error message , needed for pattern matching
 
 Combine functions with pipe operator |
+-MUST HAVE CONSISTENT FIRST ARGUMENTS in order for this to work
 
--
+#Documentation
+XDOC - generate a standalone documentation
