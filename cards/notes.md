@@ -59,3 +59,21 @@ XDOC - generate a standalone documentation
      Write what the FUNCTION does here
      """
 - COMMAND: mix docs
+
+DOC TESTS
+
+- Example code can be used for test.
+
+  - Doctests are written as follows:
+
+  ## Examples
+
+  iex> deck = Cards.create_deck
+  iex> Cards.contains?(deck, "Ace of Spades")
+  true
+
+"""
+
+- File: cards_test.exs must contain line: doctest Cards
+
+CASE TESTS

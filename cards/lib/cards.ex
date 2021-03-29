@@ -37,6 +37,16 @@ defmodule Cards do
 
 # Define a method: 3
   # contains method, also found in Enum module
+  @doc """
+  Determines whether a deck contains a given card.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Ace of Spades")
+      true
+
+  """
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
