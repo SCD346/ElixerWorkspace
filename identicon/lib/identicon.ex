@@ -5,12 +5,15 @@ defmodule Identicon do
     |> pick_color
   end
 
-  def pick_color(image) do
+
   # Using pattern matching, get first 3 vals from hex vals,
   # _tail takes the rest of the hex values away - we dont need them
-    %Identicon.Image{hex: [r, g, b | _tail]} = image
-    [r, g, b]
+  def pick_color(%Identicon.Image{hex: [r, g, b | _tail]} = image) do
+    %Indenticon.Image{image | color: {r, g, b}}
   end
+
+
+
 
   # Returns a list of hexcodes
   def hash_input(input) do
