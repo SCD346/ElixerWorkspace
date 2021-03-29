@@ -105,3 +105,5 @@ Section 4: A Few Side Topics
 #Section 6: Structs - Elixir's Data Modeling Tool
 
 - STRUCT: is a map that is used to store data in an Elixir application - just like maps - Two advantages over maps: 1) Can be assigned default values 2) Some additional compile time checking of properties
+
+Elixir supports the ability to pattern match values directly out of the argument list.
