@@ -43,3 +43,19 @@ Combine functions with pipe operator |
 
 #Documentation
 XDOC - generate a standalone documentation
+
+#Section 3: Testing and Documentation
+
+- Xdoc: used to wrote two types of documentation
+  1.  Mudule Documentation: summarized module, here is what this module does
+  2.  Function Documentation: documents the purpose of individual functions
+- write comments for xdoc as follows:
+  1. MODULES
+     @muduledoc """
+     Write what the MODULE does here
+     """
+  2. FUNCTIONS
+     @doc """
+     Write what the FUNCTION does here
+     """
+- COMMAND: mix docs
