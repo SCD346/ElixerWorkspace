@@ -101,3 +101,7 @@ Section 4: A Few Side Topics
   - colors = [{:primary, "red"}, {:secondary, "green"}] - access with colors[:primary]
     ECTO LIBRARY - example use case of a keyword list in ecto
     query = Users.find_where([where: user.age > 10, where: user.subscribed == true]}
+
+#Section 6: Structs - Elixir's Data Modeling Tool
+
+- STRUCT: is a map that is used to store data in an Elixir application - just like maps - Two advantages over maps: 1) Can be assigned default values 2) Some additional compile time checking of properties
