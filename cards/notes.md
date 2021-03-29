@@ -77,3 +77,27 @@ DOC TESTS
 - File: cards_test.exs must contain line: doctest Cards
 
 CASE TESTS
+
+Section 4: A Few Side Topics
+
+- MAPS
+- collections of key value pairs
+- Example of a map
+  colors = %{primary: "red", secondary: "blue"}
+- Use dot.notation to access
+  - colors.secondary will return "blue"
+- Use pattern matching to access
+  - %{secondary: secondary_color} = colors
+- Update a map
+  - Map.put(colors, :primary, "yellow")
+- Create a new map
+
+  - %{ colors | primary: "blue" }
+
+- KEYWORD LISTS
+  - Lists are like arrays
+  - Tuples, each index has special meaning
+- Create a Keyword list - its a list that contains tuples
+  - colors = [{:primary, "red"}, {:secondary, "green"}] - access with colors[:primary]
+    ECTO LIBRARY - example use case of a keyword list in ecto
+    query = Users.find_where([where: user.age > 10, where: user.subscribed == true]}
