@@ -9,11 +9,18 @@ defmodule Identicon do
   # Create grid that determines which squares are colored or white
     # each inner list represents a row in grid
   def build_grid(%Identicon.Image{hex: hex} = image) do
-    hex
+    grid = hex
     # send hex list to chunck - get back a list of lists
     |> Enum.chunk(3)
     # send list of lists to map
     |> Enum.map(&mirror_row/1)
+    # List module- takes a nested list, makes one single list, retains
+    # original order of all values
+    |> List.flatten
+    # Using index we need to track where we are within the list
+    |> Enum.with_index
+
+    %Identicon.Image{image | grid: grid}
   end
 
 
