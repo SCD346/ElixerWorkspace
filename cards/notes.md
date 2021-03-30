@@ -1,4 +1,5 @@
 Elixir Documentation: https://elixir-lang.org/docs.html - Elixir sits on top of Erlang
+Image documentation: Erlang EGD - http://erlang.org/documentation/doc-6.1/lib/percept-0.8.9/doc/html/egd.html
 
 #Section 1: An Elixir Warmup
 
