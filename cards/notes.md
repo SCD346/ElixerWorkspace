@@ -120,3 +120,5 @@ Section 4: A Few Side Topics
   - Example: |> Enum.map(&mirror_row/1)
 
 - rem(coce, 2) #calculated the remainder
+
+- Create a Phoenix project: mix phoenix.new projectname
