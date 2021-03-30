@@ -13,6 +13,14 @@ defmodule Identicon do
     |> Enum.chunk(3)
   end
 
+  # Mirror the elements in list, append to end, dont repeat middle
+  def mirror_row(row) do
+    # take in: [145, 46, 200]
+    [first, second | _tail] = row
+    # output: [145, 46, 200, 46, 200]
+    row ++ [second, first]
+  end
+
 
   # Using pattern matching, get first 3 vals from hex vals,
   # _tail takes the rest of the hex values away - we dont need them

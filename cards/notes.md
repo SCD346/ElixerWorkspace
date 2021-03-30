@@ -109,3 +109,5 @@ Section 4: A Few Side Topics
 - Elixir supports the ability to pattern match values directly out of the argument list.
 
 - Enum.chunk(3) - takes a longer list and makes 3 shorter, even sized lists, drops remainder
+
+- To join lists together: ++
