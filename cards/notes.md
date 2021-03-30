@@ -115,4 +115,7 @@ Section 4: A Few Side Topics
 - Enum.map() - sends every element of list, runs some function on each, gets a return value on that function, then puts these elements in a new list
 
 - To pass a reference to a function: &function_name/1 (1 means: use the function_name that uses 1 argument)
+
   - Example: |> Enum.map(&mirror_row/1)
+
+- rem(coce, 2) #calculated the remainder
