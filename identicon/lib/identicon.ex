@@ -10,8 +10,12 @@ defmodule Identicon do
     # each inner list represents a row in grid
   def build_grid(%Identicon.Image{hex: hex} = image) do
     hex
+    # send hex list to chunck - get back a list of lists
     |> Enum.chunk(3)
+    # send list of lists to map
+    |> Enum.map(&mirror_row/1)
   end
+
 
   # Mirror the elements in list, append to end, dont repeat middle
   def mirror_row(row) do
@@ -27,8 +31,6 @@ defmodule Identicon do
   def pick_color(%Identicon.Image{hex: [r, g, b | _tail]} = image) do
     %Identicon.Image{image | color: {r, g, b}}
   end
-
-
 
 
   # Returns a list of hexcodes
