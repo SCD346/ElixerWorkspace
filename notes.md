@@ -146,3 +146,28 @@ Section 4: A Few Side Topics
     - at domain/topics/new
     - request is sent to the TopicController
     - specifically, the new function
+
+Struct represents a record in the database.
+Params are what we want to update the stuct with. Usually has same properties as the Struct.
+
+#Section 9: Models in Phoenix
+
+Part of the "magic" of Phoenix
+
+- When we create a module, phoenix creates a struct for us based on the information we entered in the schema call shown below
+
+defmodule Discuss.Topic do
+use Discuss.Web, :model
+
+    schema "topics" do
+        field :title, :string
+    end
+
+Purpose of the changeset:
+
+- validate the data that we are trying to update inside of our database
+- the function that does the validation itself is called the changeset
+- in addition, the thing that gets returned is also called the changeset
+
+CHANGESET + FORM TEMPLATE = USABLE FORM
+/Users/stephendoherty/COMP167/ElixerWorkspace/discuss/web/views/topic_view.ex
