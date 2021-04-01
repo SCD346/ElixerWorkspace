@@ -122,3 +122,27 @@ Section 4: A Few Side Topics
 - rem(coce, 2) #calculated the remainder
 
 - Create a Phoenix project: mix phoenix.new projectname
+
+#Section 7: On to Phoenix
+
+- Turn on Phoenix: mix.phoenix.server
+- Must turn on Postgres manually
+- Restart Postgres Sever: brew services restart postgres
+- Start up server inside of Elixir shell: iex -S phoenix.server
+  - (helps w/ debugging)
+
+#Section 8: MVC in Phoenix
+
+- MVC
+
+  - MODEL: the raw data of the topic
+  - VIEW: a template that takes the model and makes it look nice
+  - CONTROLLER: figures out what user is looking for, gets model
+    puts it in a view, returns results
+
+    get "/topics/new", TopicController, :new
+
+    - Get request
+    - at domain/topics/new
+    - request is sent to the TopicController
+    - specifically, the new function

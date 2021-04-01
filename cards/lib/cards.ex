@@ -6,7 +6,7 @@ defmodule Cards do
   @doc """
     Returns a list of strings representing a deck of playing cards.
   """
-# Define a method: 1
+# Define a function: 1
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
@@ -28,14 +28,14 @@ defmodule Cards do
     end
   end
 
-# Define a method: 2
+# Define a function: 2
   # shuffle method found in Enum module of Elixir documentation: https://hexdocs.pm/elixir/Enum.html#member?/2
     # returns a 'copy', does not edit or impact the original
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
 
-# Define a method: 3
+# Define a function: 3
   # contains method, also found in Enum module
   @doc """
   Determines whether a deck contains a given card.
@@ -51,7 +51,7 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
-# Define a method: 4
+# Define a function: 4
   # using split method: takes in a list (deck) and an integer (represents the lenght of the list you want returned)
   # then 'splits' it into two enumerables (lists), 1: a list the length if the integer provided, 2: a list with the leftovers
   @doc """
