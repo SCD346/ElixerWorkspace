@@ -171,3 +171,9 @@ Purpose of the changeset:
 
 CHANGESET + FORM TEMPLATE = USABLE FORM
 /Users/stephendoherty/COMP167/ElixerWorkspace/discuss/web/views/topic_view.ex
+
+<%= indicates this is exlixir code, please execute it
+
+## <%= form_for @changeset, topic_path(@conn, :create), fn f -> %>
+
+     - form_for means create a form using this changeset, whenver someone submits this form, send it to the create route that is related to topics
