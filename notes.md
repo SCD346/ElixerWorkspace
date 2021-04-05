@@ -1,5 +1,7 @@
-Elixir Documentation: https://elixir-lang.org/docs.html - Elixir sits on top of Erlang
-Image documentation: Erlang EGD - http://erlang.org/documentation/doc-6.1/lib/percept-0.8.9/doc/html/egd.html
+DOCUMENTATION LINKS
+Elixir: https://elixir-lang.org/docs.html - Elixir sits on top of Erlang
+Image: Erlang EGD - http://erlang.org/documentation/doc-6.1/lib/percept-0.8.9/doc/html/egd.html
+Ecto: https://hexdocs.pm/ecto/Ecto.html
 
 #Section 1: An Elixir Warmup
 
@@ -174,6 +176,14 @@ CHANGESET + FORM TEMPLATE = USABLE FORM
 
 <%= indicates this is exlixir code, please execute it
 
-## <%= form_for @changeset, topic_path(@conn, :create), fn f -> %>
+<%= form_for @changeset, topic_path(@conn, :create), fn f -> %>
 
      - form_for means create a form using this changeset, whenver someone submits this form, send it to the create route that is related to topics
+
+# Section 10: Working with Postgres
+
+Delete: page_controller, template folder, view
+
+put_flash -> show messages to the user, shown once upon page reload
+
+- helper function available via import of controller "use Discuss.Web, :controller"
