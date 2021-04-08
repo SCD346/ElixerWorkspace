@@ -17,7 +17,7 @@
     <nav class="light-blue">
       <div class="nav-wrapper container">
         <a href="/" class="brand-logo">
-        Discussions
+        Discussions: OAUTH ONLY VERSION (with signin/out)
         </a>
         <ul class="right">
           <%= if @conn.assigns[:user] do %>
