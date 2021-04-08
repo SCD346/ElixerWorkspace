@@ -193,8 +193,3 @@ Link to another page with a path-helper instead of an href to a url
 - no need to update links if we make changes later
 
 defp - private function
-
-Section 12: Transforming
-Requests with Plugs
-
-- Guard Clause: lists all plugs that should run whn a user attempts to visit a particular route.
