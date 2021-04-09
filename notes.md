@@ -194,10 +194,14 @@ Link to another page with a path-helper instead of an href to a url
 
 defp - private function
 
-# Websockets
+# Section 13: Websockets in Phoenix
 
 - How to update the structure of DB?
   -create a migration file
   -mix ecto.gen.migration add_comments
   -edit new file with table details
   -mix ecto.migrate
+
+- How to join together strings in Elixir.
+  use this: <>
+  example: "comments:" <> topic_id
