@@ -195,3 +195,9 @@ Link to another page with a path-helper instead of an href to a url
 defp - private function
 
 # Websockets
+
+- How to update the structure of DB?
+  -create a migration file
+  -mix ecto.gen.migration add_comments
+  -edit new file with table details
+  -mix ecto.migrate
