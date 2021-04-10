@@ -7,9 +7,11 @@ defmodule Discuss.CommentsChannel do
     #first time communication with channel
     def join("comments:" <> topic_id, _params, socket) do
         topic_id = String.to_integer(topic_id)
-        topic = Repo.get(Topic, topic_id)
+        topic = Topic
+            |> Repo.get(Topic, topic_id)
+            |> Repo.preload(:comments)
 
-        {:ok, %{}, assign(socket, :topic, topic)}
+        {:ok, %{comments: topic.comments}, assign(socket, :topic, topic)}
     end
 
     #any follow up communication
