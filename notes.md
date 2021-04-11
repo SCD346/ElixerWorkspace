@@ -205,3 +205,29 @@ defp - private function
 - How to join together strings in Elixir.
   use this: <>
   example: "comments:" <> topic_id
+
+# Section 14: Phoenix 1.3 Update
+
+- New Command Shortcuts
+
+  - Genertate Project:
+    was-> mix phoenix.new -now-> mix phx.new
+  - Start Server:
+    was-> mix phoenix.server -now-> mix phx.server
+  - Show all routes:
+    was-> mix phoenix.routes -now-> mix phx.routes
+  - Generate a new channel file:
+    was-> mix phoenix.gen.channel -now-> mix phx.gen.channel
+
+- Directory structure update
+
+-Web folder split in two
+
+1. appname: contains business logic and db access
+   houses 'context' folders: contains code that describes what the app does
+2. appname_web: contains code to communicate with web
+   no model folder anymore-this is the update folder
+
+- Client (static) assets separated
+  - New "Assets" folder
+  - JS folder is broken out, will operate as a JS work area.
