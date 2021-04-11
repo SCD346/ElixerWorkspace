@@ -3,9 +3,11 @@
 
 // To use Phoenix channels, the first step is to import Socket
 // and connect at the socket path in "lib/my_app/endpoint.ex":
-import {Socket} from "phoenix"
+import {Socket} from "phoenix";
 
-let socket = new Socket("/socket", {params: {token: window.userToken}})
+let socket = new Socket("/socket", {params: {token: window.userToken}});
+
+// take token from above and use it to authenticate the user
 
 // When you connect, you'll often need to authenticate the client.
 // For example, imagine you have an authentication plug, `MyAuth`,
@@ -51,7 +53,7 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 // Finally, pass the token on connect as below. Or remove it
 // from connect if you don't care about authentication.
 
-socket.connect()
+socket.connect();
 
 // Now that you are connected, you can join channels with a topic:
 const createSocket = (topicId) => {
@@ -60,7 +62,11 @@ const createSocket = (topicId) => {
     .receive("ok", resp => {
         renderComments(resp.comments);
       })
-    .receive("error", resp => { console.log("Unable to join", resp) })
+    .receive("error", resp => {
+      console.log("Unable to join", resp)
+    });
+
+  channel.on(`comments:${topicId}:new`, renderComment);
 
   document.querySelector('button').addEventListener('click', () => {
     const content = document.querySelector('textarea').value;
@@ -69,17 +75,27 @@ const createSocket = (topicId) => {
   });
 }
 
+
 function renderComments(comments) {
   const renderedComments = comments.map(comment => {
-    return `
+    return commentTemplate(comment);
+  });
+
+  document.querySelector('.collection').innerHTML = renderedComments.join('');
+}
+
+function renderComment(event) {
+  const renderedComment = commentTemplate(comment);
+
+  document.querySelector('.collection').innerHTML += renderedComment;
+}
+
+function commentTemplate(comment) {
+  return `
       <li class="collection-item">
         ${comment.content}
       </li>
     `;
-  });
-
-  document.querySelector('.collection').innerHTML = renderedComments.join('');
-
 }
 
 window.createSocket = createSocket;
