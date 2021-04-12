@@ -231,3 +231,5 @@ defp - private function
 - Client (static) assets separated
   - New "Assets" folder
   - JS folder is broken out, will operate as a JS work area.
+
+Read documentation on: Phoenix 1.3 Contexts
