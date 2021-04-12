@@ -3,9 +3,9 @@
 
 // To use Phoenix channels, the first step is to import Socket
 // and connect at the socket path in "lib/my_app/endpoint.ex":
-import {Socket} from "phoenix";
+import { Socket } from 'phoenix';
 
-let socket = new Socket("/socket", {params: {token: window.userToken}});
+let socket = new Socket('/socket', { params: { token: window.userToken } });
 
 // take token from above and use it to authenticate the user
 
@@ -57,14 +57,15 @@ socket.connect();
 
 // Now that you are connected, you can join channels with a topic:
 const createSocket = topicId => {
-  let channel = socket.channel(`comments:${topicId}`,{} );
-  channel.join()
-    .receive("ok", resp => {
+  let channel = socket.channel(`comments:${topicId}`, {});
+  channel
+    .join()
+    .receive('ok', resp => {
       console.log(resp);
         renderComments(resp.comments);
       })
-    .receive("error", resp => {
-      console.log("Unable to join", resp)
+    .receive('error', resp => {
+      console.log('Unable to join', resp);
     });
 
   channel.on(`comments:${topicId}:new`, renderComment);
@@ -74,7 +75,7 @@ const createSocket = topicId => {
 
     channel.push('comment:add', { content: content });
   });
-}
+};
 
 
 function renderComments(comments) {
@@ -86,7 +87,7 @@ function renderComments(comments) {
 }
 
 function renderComment(event) {
-  const renderedComment = commentTemplate(comment);
+  const renderedComment = commentTemplate(event.comment);
 
   document.querySelector('.collection').innerHTML += renderedComment;
 }
