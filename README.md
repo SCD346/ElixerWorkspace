@@ -8,8 +8,7 @@ To start your Phoenix app:
 - Start Phoenix endpoint with `mix phoenix.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+![image info](./discuss/web/static/assets/images/discuss.png)
 
 # Cards
 
@@ -18,12 +17,13 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `cards` to your list of dependencies in `mix.exs`:
 
-````elixir
+```elixir
 def deps do
   [
     {:cards, "~> 0.1.0"}
   ]
 end
+```
 
 # Identicon
 
@@ -38,7 +38,7 @@ def deps do
     {:identicon, "~> 0.1.0"}
   ]
 end
-````
+```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
